@@ -1,0 +1,22 @@
+PODS:
+  - EasyPeasy (1.9.0)
+  - Kingfisher (5.15.7):
+    - Kingfisher/Core (= 5.15.7)
+  - Kingfisher/Core (5.15.7)
+
+DEPENDENCIES:
+  - EasyPeasy
+  - Kingfisher
+
+SPEC REPOS:
+  trunk:
+    - EasyPeasy
+    - Kingfisher
+
+SPEC CHECKSUMS:
+  EasyPeasy: 19a84ef8f8bbcf925b9fecc29d1d78b7dab96718
+  Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
+
+PODFILE CHECKSUM: cc76a8e74b8701e61c077f49c065289aa414b750
+
+COCOAPODS: 1.9.2
