@@ -30,12 +30,17 @@ class MainViewController: UIViewController, UITableViewDelegate{
         table.easy.layout(Edges())
         table.delegate = self
         table.dataSource = viewModel
+        table.register(MainViewControllerCell.self, forCellReuseIdentifier: "cell")
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let v = viewModel.venues?[indexPath.row], let id = v.id {
             viewModel.openDetailedViewController(id: id)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        80
     }
     
 }

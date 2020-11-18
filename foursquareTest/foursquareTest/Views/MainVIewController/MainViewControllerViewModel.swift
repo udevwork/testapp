@@ -44,9 +44,10 @@ extension MainViewControllerViewModel: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        cell.textLabel?.text = venues?[indexPath.row].name
-        cell.detailTextLabel?.text = venues?[indexPath.row].location?.address
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        if let name = venues?[indexPath.row].name, let address = venues?[indexPath.row].location?.address {
+            (cell as? MainViewControllerCell)?.setup(name: name, address: address)
+        }
         return cell
     }
     
